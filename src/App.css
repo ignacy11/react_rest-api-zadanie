@@ -12,6 +12,7 @@
     height: 100vh;
     width: 100vw;
 }
+
 h1, h2, h3, h4, h5, h6, p, span {
     color: #cdd6f4;
 }
@@ -19,6 +20,20 @@ h1, h2, h3, h4, h5, h6, p, span {
 a {
     color: #89b4fa;
 }
+
+.header-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.header-group button {
+    border: 2px solid #7c7f93;
+    background-color: #1e1e2e;
+}
+
 header {
     width: 100%;
     height: 10%;
