@@ -4,13 +4,17 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 #root {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+    background-color: #1E1E2E;
 }
 
 h1, h2, h3, h4, h5, h6, p, span {
@@ -21,22 +25,9 @@ a {
     color: #89b4fa;
 }
 
-.header-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: end;
-    gap: 2rem;
-}
-
-.header-group button {
-    border: 2px solid #7c7f93;
-    background-color: #1e1e2e;
-}
-
 header {
     width: 100%;
-    height: 10%;
+    min-height: 12%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -50,6 +41,40 @@ header h1 {
     margin-left: 2rem;
 }
 
+.filters-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 0.9rem;
+    margin-right: 65rem;
+}
+
+.filter-by-name-section, .filter-by-origin-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.filter-by-name-section {
+    margin-right: 2rem;
+}
+
+.filter-span {
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    position: relative;
+    left: 3px;
+}
+
+input, select {
+    background-color: #313244;
+    border: 2px solid #181825;
+    padding: 0.3rem;
+    border-radius: 6px;
+}
+
 header a {
     font-size: 1.1rem;
     margin-right: 2rem;
@@ -57,12 +82,11 @@ header a {
 
 main {
     width: 100%;
-    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #181825;
+    background-color: #1E1E2E;
 }
 
 main table {
@@ -70,12 +94,59 @@ main table {
     height: 90%;
     border: 3px solid #9399b2;
     border-collapse: collapse;
+    margin: 2rem 0 6rem;
 }
-td {
+td, th {
     border: 3px solid #9399b2;
+    background-color: #181825;
+}
+
+tr {
+    max-height: 12rem;
+}
+
+.breed-td,
+.description-td,
+.temperament-td,
+.origin-td {
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 td img {
-    height: 150px;
-    width: 150px;
+    width: 100%;
+    height: 100%;
+}
+
+.image-td {
+    width: 15%;
+}
+
+.breed-td {
+    width: 10%;
+}
+
+.description-td {
+    width: 45%;
+}
+
+.temperament-td {
+    width: 20%;
+}
+
+.origin-td {
+    width: 10%;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cat-loading {
+    width: 20rem;
+    height: 20rem;
 }
